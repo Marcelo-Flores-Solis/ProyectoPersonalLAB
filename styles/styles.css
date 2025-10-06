@@ -1,0 +1,35 @@
+/* Estilos base */
+:root{
+  --bg:#f7f7fc;
+  --fg:#111;
+  --accent:#2563eb;
+}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:1rem}
+header{background:#fff;padding:1rem;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.06);margin-bottom:1rem}
+nav a{color:var(--accent);text-decoration:none;margin-right:.5rem}
+main{background:#fff;padding:1rem;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+footer{margin-top:1rem;font-size:.9rem;color:#666}
+
+.container{max-width:900px;margin:0 auto}
+
+/* Layout de tarjetas */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.card h3{margin-top:0;color:var(--accent)}
+
+/* Series */
+.series-list{list-style:none;padding:0;margin:0}
+.series-list li{background:#fff;margin:0.5rem 0;padding:.75rem;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+
+/* Cuadro '¿ya la viste?' */
+.watch-card{background:#fff;padding:1rem;border-radius:8px;margin-top:1rem;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.saw-form{display:flex;gap:.5rem;align-items:center}
+.saw-form label{display:inline-flex;gap:.4rem;align-items:center}
+.saw-form button{background:var(--accent);color:#fff;border:none;padding:.5rem .75rem;border-radius:6px;cursor:pointer}
+.saw-form input[type="radio"]{width:16px;height:16px}
+
+/* Responsive small */
+@media(max-width:520px){
+  body{padding:.75rem}
+  header, main{padding:.75rem}
+}

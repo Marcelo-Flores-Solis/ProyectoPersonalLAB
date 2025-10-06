@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Series favoritas</title>
+		<link rel="stylesheet" href="../styles/styles.css">
+	</head>
+	<body>
+		<header>
+			<h1>Series que recomiendo</h1>
+			<nav>
+				<a href="../index.html">Inicio</a> |
+				<a href="musica.html">Música</a>
+			</nav>
+		</header>
+		<main class="container">
+			<section aria-labelledby="series-list">
+				<h2 id="series-list">Series</h2>
+				<ul class="series-list">
+					<li>The Boys / Gen V</li>
+					<li>Stranger Things</li>
+					<li>Black Mirror</li>
+				</ul>
+			</section>
+
+			<section class="watch-card" aria-labelledby="saw-question">
+				<h3 id="saw-question">¿Ya la viste?</h3>
+				<form class="saw-form" onsubmit="event.preventDefault(); alert('Gracias por responder!');">
+					<label>
+						<input type="radio" name="seen" value="sí"> Sí
+					</label>
+					<label>
+						<input type="radio" name="seen" value="no"> No
+					</label>
+					<button type="submit">Enviar</button>
+				</form>
+			</section>
+		</main>
+		<footer>
+			<p>© — Series</p>
+		</footer>
+	</body>
+</html>
+
