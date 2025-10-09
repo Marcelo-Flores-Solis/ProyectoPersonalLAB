@@ -1,28 +1,62 @@
-<!doctype html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Juegos</title>
-		<link rel="stylesheet" href="../styles/styles.css">
-	</head>
-	<body>
-		<header>
-			<h1>Juegos</h1>
-			<nav>
-				<a href="../index.html">Inicio</a> |
-				<a href="musica.html">Música</a>
-			</nav>
-		</header>
-		<main class="container">
-			<section aria-labelledby="intro">
-				<h2 id="intro">Juegos</h2>
-				<p>Hollow Knight, Terraria, Minecraft</p>
-			</section>
-		</main>
-		<footer>
-			<p>© — Juegos</p>
-		</footer>
-	</body>
-</html>
+<!DOCTYPE html>
+	<html lang="es">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+			<title>Juegos</title>
+			<link rel="stylesheet" href="../styles/styles1.css">
+		</head>
 
+		<body>
+			<header class = "headerJuegos">
+				<div class = "menuJuegos responsive">
+
+					<a href="" class="logo">JUEGOS</a>
+					<input type="checkbox" id="menu-bar">
+					<label for="menu-bar"><img src="../imagenes/menu.png" class= "menu-icono" alt=""></label>
+					<nav class= "navJuegos">
+
+						<ul>
+							<li><a href="../index.html"> Inicio </a></li>
+							<li> <a href="musica.html"> Series </a> </li>
+							<li> <a href="series.html"> Musica</a> </li>
+						</ul>
+
+					</nav>
+
+				</div>	
+
+				<div class ="contenidoJuegos responsive">
+					<h1>Tu mundo, tus reglas</h1>
+					<p>No solo juegues… vive la aventura.</p>
+					<a href="#DESCUBRE" class="btn-1">DESCUBRE</a>
+				</div>
+			</header>
+
+			<div class="separador"></div>
+
+			<main class = "mainJuegos" id=  "DESCUBRE">
+				<section class = terraria>
+					<details class = "informacionJuegos">
+						<summary class = "tituloJuegos" > Terraria</summary>
+						<p>¡Cava, lucha, explora, construye! Nada es imposible en este juego de aventuras repleto de acción. El mundo es tu lienzo y la tierra misma es tu pintura.</p>
+					</details>
+				<a href="https://store.steampowered.com/app/105600/Terraria/" target="_blank" class="btn-Steam"><img src="../imagenes/steam.png" alt="" class="icono">Steam</a>
+				</section>
+
+				<section class = minecraft>
+					<details class = "informacionJuegos">
+						<summary class = "tituloJuegos" > Minecraft</summary>
+						<p>Explora mundos generados por procedimientos y construye cosas increíbles, desde las casas más sencillas hasta los castillos más grandiosos. Juega a tu manera en modo creativo o aventúrate en el modo supervivencia, donde tendrás que adquirir recursos y mantenerte a salvo de los peligros.</p>
+					</details>
+				<a href="https://www.minecraft.net/es-es" target="_blank" class="btn-Steam"><img src="../imagenes/minecraft.png" alt="" class="icono">Minecraft</a>
+				</section>
+			</main>
+
+
+
+			<footer>
+				<p>byMarcelo</p>
+			</footer>
+		</body>
+	</html>
