@@ -1,30 +1,137 @@
+
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Aprende Ajedrez</title>
-		<link rel="stylesheet" href="../styles/styles.css">
-	</head>
-	<body>
-		<header>
-			<h1>Ajedrez para principiantes</h1>
-			<nav>
-				<a href="../index.html">Inicio</a> |
-				<a href="piano.html">Piano</a>
-			</nav>
-		</header>
-		<main>
-			<p>Ajedrez</p>
-			<ul>
-				<li>Movimientos</li>
-				<li>Aperturas</li>
-				<li>Tácticas</li>
-			</ul>
-		</main>
-		<footer>
-			<p>© — Ajedrez</p>
-		</footer>
-	</body>
-</html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Aprende Ajedrez | Método Capablanca</title>
+        <link rel="stylesheet" href="/assets/css/main.css">
+    </head>
+    
+    <body>
+        <header class="site-header">
+            <div class="container header-content">
+                <h1 class="logo">Ajedrez Lógico</h1>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">Inicio</a>
+                    <a href="/ajedrez" class="nav-link active">Ajedrez</a>
+                    <a href="/piano" class="nav-link">Piano</a>
+                    <a href="/juegos" class="nav-link">Juegos</a>
+                    <a href="/contacto" class="nav-link">Contacto</a>
+                </nav>
+            </div>
+        </header>
 
+        <main>
+            <section class="hero-chess">
+                <div class="container text-center">
+                    <h2>"El ajedrez es algo más que un juego; es una diversión intelectual."</h2>
+                    <p>— José Raúl Capablanca</p>
+                </div>
+            </section>
+
+            <section class="container content-section">
+                <h2 class="section-title text-center">Las 5 Reglas de Oro de Capablanca</h2>
+                <p class="intro-text text-center">Simplicidad, solidez y lógica. Así dominaba el campeón mundial.</p>
+                
+                <article class="rule-card rule-highlight">
+                    <h3>Regla 1: Si tú no te equivocas, tu oponente lo hará</h3>
+                    <p>No fuerces jugadas innecesarias. El ajedrez simple aumenta la probabilidad de error del rival. Aquí las "gemas" clave para tus piezas:</p>
+                    
+                    <div class="gems-grid">
+                        <div class="gem-item">
+                            
+                            <p><strong>Caballos:</strong> Rinden mejor en el centro (puestos avanzados).</p>
+                        </div>
+                        <div class="gem-item">
+                           
+                            <p><strong>Alfiles:</strong> Necesitan diagonales abiertas para tener poder.</p>
+                        </div>
+                        <div class="gem-item">
+                            
+                            <p><strong>Torres:</strong> Anhelan columnas abiertas para penetrar.</p>
+                        </div>
+                        <div class="gem-item">
+                            
+                            <p><strong>Defensa:</strong> La mejor defensa es un ataque activo.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="rules-grid-container">
+                    
+                    <article class="rule-card">
+                        <div class="card-number">2</div>
+                        <h3>Usa todas tus piezas</h3>
+                        <p>Una pieza sin jugar es desventaja numérica. Evita ataques prematuros si no has desarrollado todo tu ejército.</p>
+                    </article>
+
+                    <article class="rule-card">
+                        <div class="card-number">3</div>
+                        <h3>Avanza y ataca (con todo activo)</h3>
+                        <p>Solo cuando haya coordinación es momento de presionar. El ataque debe ser consecuencia de una buena posición, no un impulso.</p>
+                    </article>
+
+                    <article class="rule-card">
+                        <div class="card-number">4</div>
+                        <h3>Calcula lo necesario</h3>
+                        <p>No te agotes calculando 10 jugadas. Basta con prever <strong>2 jugadas por delante</strong> si tu posición es sana y lógica.</p>
+                    </article>
+
+                    <article class="rule-card">
+                        <div class="card-number">5</div>
+                        <h3>Mejora tu peor pieza</h3>
+                        <p>Pregúntate: <em>¿Cuál es mi pieza menos activa?</em> Identifícala y reubícala. Esto mejora tu posición gradualmente sin riesgos.</p>
+                    </article>
+
+                </div>
+
+                <div class="conclusion-box">
+                    <h3>La Fórmula del Éxito</h3>
+                    <ul class="conclusion-list">
+                        <li>Simplicidad</li>
+                        <li>Actividad de piezas</li>
+                        <li>Lógica posicional</li>
+                        <li>Minimización de errores</li>
+                    </ul>
+                    <p>Ideal para pasar de principiante a intermedio.</p>
+                </div>
+            </section>
+
+            <section class="container content-section bg-light">
+                <h2 class="section-title">Ponlo en práctica: La Apertura Escocesa</h2>
+                <p>Una apertura simple y directa: Actividad y presión central.</p>
+
+                <div class="moves-container">
+                    <div class="move-step">
+                        <span class="step-number">1</span>
+                        <div class="step-desc">
+                            <h4>e4 ... e5</h4>
+                            <p>Control del centro inmediato.</p>
+                        </div>
+                    </div>
+                    <div class="move-step">
+                        <span class="step-number">2</span>
+                        <div class="step-desc">
+                            <h4>Cf3 ... Cc6</h4>
+                            <p>Desarrollo del caballo </p>
+                        </div>
+                    </div>
+                    <div class="move-step highlight-step">
+                        <span class="step-number">3</span>
+                        <div class="step-desc">
+                            <h4>¡d4!</h4>
+                            <p>Rompe el centro. Abre líneas para alfiles y dama </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>By Cefiro</p>
+            </div>
+        </footer>
+    </body>
+</html>
