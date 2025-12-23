@@ -3,42 +3,84 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Mi sitio - Inicio</title>
+		<title>Cefiro Production</title>
 		<link rel="stylesheet" href="styles/styles.css">
 	</head>
-	<body>
-		<header>
-			<h1>Bienvenido a mi sitio</h1>
-			<nav>
-				<a href="/">Inicio</a> | 
-				
-				<a href="/contacto">Contacto / Sobre Mí</a> | 
-				
-				<a href="/ajedrez">Ajedrez</a> |
-				<a href="/piano">Piano</a> |
-				<a href="/juegos">Juegos</a> |
-				<a href="/musica">Música</a> |
-				<a href="/series">Series</a>
-			</nav>
-			
-		</header>
-		<main>
-			<section>
-				<h2>Resumen</h2>
-				<p>Página de inicio</p>
-			</section>
 
-			<section>
-				<h2>Proyectos</h2>
-				<ul>
-					<li><a href="sobreMi/experiencias.html">Experiencias</a></li>
-					<li><a href="aprendeAlgo/ajedrez.html">Ajedrez</a></li>
-					<li><a href="diviertete/series.html">Series favoritas</a></li>
-				</ul>
+	<body>
+		<header class="site-header">
+            <div class="container header-content">
+                <h1 class="logo">Bienvenido a mi sitio</h1>
+                
+                <nav class="main-nav">
+                    <a href="/" class="nav-link active">Inicio</a>
+                    <a href="/contacto" class="nav-link">Contacto / Sobre Mí</a>
+                    <a href="/ajedrez" class="nav-link">Ajedrez</a>
+                    <a href="/piano" class="nav-link">Piano</a>
+                    <a href="/juegos" class="nav-link">Juegos</a>
+                    <a href="/musica" class="nav-link">Música</a>
+                    <a href="/series" class="nav-link">Series</a>
+                </nav>
+            </div>
+        </header>
+
+		<main>
+			<section class="intro-bienvenida">
+				<div class="container text-center"> <h2>¡Hola! Bienvenido a mi mundo</h2>
+					<p>
+						Esta pagina fue creada con el objetivo de te diviertas!
+						Explora o aprende algo nuevo 
+					</p>
+					
+				</div>
+      	  	</section>
+
+			<section class="seccion-recomendados container">
+				<h2 class="section-title">Destacados /h2>
+				
+				<div class="grid-recomendados">
+					
+					<article class="card-highlight">
+						<div class="card-image">
+							<span class="icon"></span>
+						</div>
+						<div class="card-content">
+							<h3>Apertura Escocesa</h3>
+							<p>Una apertura sencilla</p>
+							<a href="/ajedrez" class="link-arrow">Ver;</a>
+						</div>
+					</article>
+
+					<article class="card-highlight">
+						<div class="card-image">
+							<span class="icon">⛩️</span>
+						</div>
+						<div class="card-content">
+							<h3>Anime Favorito</h3>
+							<p>Empezar de cero</p>
+							<a href="/series" class="link-arrow">Ver</a>
+						</div>
+					</article>
+
+					<article class="card-highlight">
+						<div class="card-image">
+							<span class="icon">🎹</span>
+						</div>
+						<div class="card-content">
+							<h3>Piezas para empezar</h3>
+							<p>algo simple que puedes tocar</p>
+							<a href="/piano" class="link-arrow">Escuchar &rarr;</a>
+						</div>
+					</article>
+
+				</div>
 			</section>
 		</main>
-		<footer>
-			<p>Hecho con  — </p>
+
+		<footer class= "site-footer">
+			<div class="container">
+				<p>By Cefiro</p>
+			</div>
 		</footer>
 	</body>
 </html>
