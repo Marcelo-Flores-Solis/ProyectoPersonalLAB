@@ -4,10 +4,10 @@ import os
 import mimetypes
 from urllib.parse import parse_qs
 
-# IMPORTAMOS NUESTRO NUEVO ARCHIVO
+# 
 import database.db_manager as db_manager 
 
-PORT = int(os.environ.get("PORT", 8000))
+PORT = 8000
 TEMPLATE_DIR = 'templates'
 ASSET_DIR = 'assets'
 
@@ -34,13 +34,12 @@ class MiSitioHandler(http.server.BaseHTTPRequestHandler):
                 self.servir_statico()
                 return
 
-            # CASO ESPECIAL: ADMIN
+            # admin
             if path == '/admin':
                 archivo_path = os.path.join(TEMPLATE_DIR, 'admin.html')
                 with open(archivo_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
-                # USAMOS DB_MANAGER PARA LEER LOS DATOS
                 filas = db_manager.obtener_mensajes()
                 
                 content = content.replace('{FILAS_TABLA}', filas)
@@ -105,7 +104,7 @@ class MiSitioHandler(http.server.BaseHTTPRequestHandler):
         
         print(f"Recibido: {nombre}")
 
-        # USAMOS DB_MANAGER PARA GUARDAR
+        
         db_manager.guardar_mensaje(nombre, email, mensaje)
 
         self.send_response(303) 

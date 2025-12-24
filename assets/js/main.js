@@ -1,25 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. CONFIGURACIÓN DEL OBSERVADOR
+    // obssservador
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 // Espera a que se vea el 15% del elemento
+        threshold: 0.15 
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Agrega la clase para activar la animación
                 entry.target.classList.add('active');
-                // Deja de observar para ahorrar recursos
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // 2. SELECCIONAR ELEMENTOS PARA ANIMAR
-    // Aquí listamos TODAS las clases importantes de tu sitio
+    // ELEMENTOS PARA ANIMAR
     const elementsToAnimate = document.querySelectorAll(`
         .hero-content, 
         .section-title, 
@@ -35,17 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
         .login-card
     `);
 
-    // 3. APLICAR ANIMACIÓN Y EFECTO CASCADA
+    // APLICAR ANIMACIÓN Y EFECTO CASCADA
     elementsToAnimate.forEach((el, index) => {
-        el.classList.add('reveal'); // Los ocultamos de inicio
+        el.classList.add('reveal'); 
         
-        // Si el elemento está dentro de una grid, calculamos un retraso
-        // para que aparezcan uno por uno (efecto dominó)
         const parentGrid = el.closest('.grid-hub, .grid-recomendados, .music-grid, .series-grid, .chess-grid, .piano-grid, .gems-grid');
         
         if (parentGrid) {
-            // Usamos el modulo (%) para que el retraso se reinicie cada 4 elementos
-            // Esto evita esperas muy largas en listas grandes
+            
             const delayClass = `delay-${(index % 4) + 1}`;
             el.classList.add(delayClass);
         }
@@ -53,9 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(el);
     });
 
-    // 4. HEADER INTELIGENTE (Se esconde/aparece)
+    // HEADER INTELIGENTE (Se esconde/aparece)
     let lastScroll = 0;
-    const header = document.querySelector('header'); // Selecciona cualquier header
+    const header = document.querySelector('header'); 
     
     if (header) {
         window.addEventListener("scroll", () => {

@@ -1,16 +1,14 @@
-/* --- ESTILOS DEL HUB (INICIO) --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
-    /* Fondo neutral grisáceo */
+   
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* --- HERO (BIENVENIDA) --- */
+
 .intro-bienvenida {
-    /* Degradado suave y moderno */
     background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
     color: white;
     padding: 100px 20px;
@@ -47,7 +45,7 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* --- GRID DEL HUB --- */
+/* hub */
 .grid-hub {
     display: grid;
     /* Tarjetas grandes y vistosas */
@@ -56,7 +54,7 @@ body {
     padding: 20px 0 60px;
 }
 
-/* --- TARJETAS DE FUSIÓN --- */
+/* tarjetas */
 .hub-card {
     position: relative;
     background: white;
@@ -72,7 +70,7 @@ body {
     border: 1px solid #eee;
 }
 
-/* Enlace que cubre toda la tarjeta */
+
 .full-link {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -96,7 +94,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Botón falso decorativo */
+
 .fake-btn {
     display: inline-block;
     padding: 8px 20px;
@@ -108,33 +106,31 @@ body {
     transition: all 0.3s;
 }
 
-/* --- TEMAS (COLORES ESPECÍFICOS) --- */
-/* Definimos el color de cada tarjeta */
-.theme-chess  { --theme-color: #6b4c35; } /* Café Ajedrez */
-.theme-piano  { --theme-color: #d4a373; } /* Dorado Piano */
-.theme-games  { --theme-color: #F02D3A; } /* Rojo Gamer */
-.theme-music  { --theme-color: #1db954; } /* Verde Spotify */
-.theme-series { --theme-color: #8e44ad; } /* Morado Cine */
+/* color por cada tema */
+.theme-chess  { --theme-color: #6b4c35; } 
+.theme-piano  { --theme-color: #d4a373; } 
+.theme-games  { --theme-color: #F02D3A; } 
+.theme-music  { --theme-color: #1db954; } 
+.theme-series { --theme-color: #8e44ad; } 
 
-/* --- INTERACCIÓN HOVER (LA MAGIA) --- */
+
 .hub-card:hover {
     transform: translateY(-10px); /* Flota */
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    /* El borde inferior se pinta del color del tema */
     border-bottom: 8px solid var(--theme-color);
 }
 
 .hub-card:hover h3 {
-    color: var(--theme-color); /* Título cambia de color */
+    color: var(--theme-color); 
 }
 
 .hub-card:hover .fake-btn {
-    background-color: var(--theme-color); /* Botón se llena de color */
+    background-color: var(--theme-color); 
     border-color: var(--theme-color);
     color: white;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 600px) {
     .intro-bienvenida h2 { font-size: 2rem; }
     .hub-card { height: 200px; }

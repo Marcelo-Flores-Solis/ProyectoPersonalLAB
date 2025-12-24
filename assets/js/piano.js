@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const keys = document.querySelectorAll(".key");
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-    // Mapa de frecuencias (Notas musicales en Hertz)
+    // Notas musicales
     const notes = {
         "C": 261.63,  // Do
         "C#": 277.18,
@@ -24,39 +24,36 @@ document.addEventListener("DOMContentLoaded", () => {
     function playSound(note) {
         if (!notes[note]) return;
 
-        // Crear oscilador (generador de sonido)
+        // generador de sonido
         const oscillator = audioCtx.createOscillator();
         const gainNode = audioCtx.createGain();
 
-        oscillator.type = "triangle"; // Tipo de onda (suena suave)
+        oscillator.type = "triangle"; 
         oscillator.frequency.setValueAtTime(notes[note], audioCtx.currentTime);
 
-        // Conectar: Oscilador -> Volumen -> Altavoces
         oscillator.connect(gainNode);
         gainNode.connect(audioCtx.destination);
 
-        // Envolvente de sonido (ADSR simple): Golpe fuerte y desvanecimiento
         gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-        gainNode.gain.linearRampToValueAtTime(0.6, audioCtx.currentTime + 0.02); // Ataque
-        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.5); // Desvanecimiento largo
+        gainNode.gain.linearRampToValueAtTime(0.6, audioCtx.currentTime + 0.02); 
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.5); 
 
         oscillator.start();
         oscillator.stop(audioCtx.currentTime + 1.5);
     }
 
-    // Evento Clic en Teclas
+    // Evento
     keys.forEach(key => {
         key.addEventListener("mousedown", () => {
             const note = key.getAttribute("data-note");
             playSound(note);
             
-            // Animación visual al presionar
             key.style.transform = "scale(0.95) translateY(2px)";
             setTimeout(() => key.style.transform = "", 150);
         });
     });
 
-    // BONUS: Tocar con el teclado de la PC
+    // Mapeo de teclado
     const keyboardMap = {
         "a": "C", "w": "C#", "s": "D", "e": "D#", "d": "E",
         "f": "F", "t": "F#", "g": "G", "y": "G#", "h": "A", "u": "A#", "j": "B"
@@ -67,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (note && !e.repeat) {
             const keyElement = document.querySelector(`.key[data-note="${note}"]`);
             if (keyElement) {
-                // Disparar el evento mousedown manualmente para reciclar lógica
                 const event = new Event('mousedown');
                 keyElement.dispatchEvent(event);
             }

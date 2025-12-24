@@ -1,6 +1,6 @@
 import mysql.connector
 
-# Configuracion de conexion a WampServer
+# Configuracion de conexion
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
@@ -9,7 +9,6 @@ DB_CONFIG = {
 }
 
 def guardar_mensaje(nombre, email, mensaje):
-    """Guarda un nuevo contacto en la base de datos"""
     conexion = None
     try:
         conexion = mysql.connector.connect(**DB_CONFIG)
@@ -30,19 +29,16 @@ def guardar_mensaje(nombre, email, mensaje):
             conexion.close()
 
 def obtener_mensajes():
-    """Devuelve las filas HTML para la tabla de admin"""
     conexion = None
     filas_html = ""
     try:
         conexion = mysql.connector.connect(**DB_CONFIG)
         cursor = conexion.cursor()
         
-        # Ordenamos por fecha descendente (lo mas nuevo primero)
         cursor.execute("SELECT id, nombre, email, mensaje, fecha FROM mensajes ORDER BY fecha DESC")
         resultados = cursor.fetchall()
         
         for row in resultados:
-            # Construimos el HTML aqui para que el server.py este limpio
             filas_html += f"""
             <tr>
                 <td>{row[0]}</td>
@@ -55,7 +51,7 @@ def obtener_mensajes():
             
     except mysql.connector.Error as err:
         print(f"DB Error: {err}")
-        filas_html = "<tr><td colspan='5'>Error de conexión a la base de datos</td></tr>"
+        filas_html = "<tr><td colspan='5'>Error de conexios</td></tr>"
     finally:
         if conexion and conexion.is_connected():
             cursor.close()
