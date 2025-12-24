@@ -4,7 +4,9 @@
 * **Estado:** Ejecución Local (Requiere Python y MySQL/WampServer)
 * **Hospedaje** https://web-production-4c97e.up.railway.app/, en el hospedaje funciona el python pero no la base de datos
 
-posee un login escondido
+la base de datos funciona en mysql y se requiere de una base llamada cefiro_db, e importar todo lo que esta en la carpeta sql
+
+posee un login escondido en http://localhost:8000/login con usuario admin y contra 123 para poder ver los mensajes recibidos en la base de datos en un tabla
 
 
 ### Descripción
