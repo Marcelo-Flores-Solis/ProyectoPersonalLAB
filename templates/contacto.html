@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Contacto | Cefiro Productions</title>
+        
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/contacto.css">
+    </head>
+    
+    <body>
+        <header class="site-header">
+            <div class="container header-content">
+                <h1 class="logo">Contacto</h1>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">Inicio</a>
+                    <a href="/ajedrez" class="nav-link">Ajedrez</a>
+                    <a href="/piano" class="nav-link">Piano</a>
+                    <a href="/juegos" class="nav-link">Juegos</a>
+                    <a href="/contacto" class="nav-link active">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-contact">
+                <div class="container text-center">
+                    <h2>Estamos en contacto</h2>
+                    <p>¿Tienes alguna recomendación, duda o proyecto? Escríbeme.</p>
+                </div>
+            </section>
+
+            <section class="container content-section">
+                <div class="form-container">
+                    
+                    <form action="/enviar-contacto" method="POST" class="contact-form">
+                        
+                        <div class="form-group">
+                            <label for="nombre">Tu Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Cefiro" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Tu Correo:</label>
+                            <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame algo..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    </form>
+
+                </div>
+            </section>
+
+            <section class="container text-center" style="margin-top: 2rem;">
+                <p class="small-text">
+                    * Tus datos están seguros.
+                </p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>By Cefiro &copy; 2025</p>
+            </div>
+        </footer>
+        <script src="/assets/js/main.js"></script>
+    </body>
+</html>

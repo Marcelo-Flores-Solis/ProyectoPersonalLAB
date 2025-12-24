@@ -1,0 +1,126 @@
+/* --- 1. CONSISTENCIA (Montserrat) --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- 2. HERO (FONDO OSCURO) --- */
+.hero-login {
+    /* Mismo gradiente Slate/Teal pero un poco más oscuro */
+    background: linear-gradient(135deg, #1f2d3d 0%, #3a7b85 100%);
+    color: white;
+    padding: 80px 0 120px; /* Padding extra abajo para el efecto flotante */
+    text-align: center;
+    border-bottom: 1px solid #34495e;
+}
+
+.hero-login h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-login p {
+    font-size: 1rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- 3. TARJETA FLOTANTE (Centrada y Estrecha) --- */
+.login-card {
+    background: white;
+    max-width: 400px; /* Más estrecho que el de contacto */
+    margin: -80px auto 0; /* Sube sobre el hero */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 10;
+    border: 1px solid #eee;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* --- 4. FORMULARIO --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-group input:focus {
+    border-color: #4ca1af;
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(76, 161, 175, 0.1);
+}
+
+/* --- 5. BOTÓN DE ACCESO --- */
+.btn-login {
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+    background: linear-gradient(135deg, #4ca1af 0%, #2c3e50 100%);
+}
+
+/* --- 6. FOOTER --- */
+.site-footer {
+    background: #2c3e50;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 80px;
+    font-size: 0.8rem;
+}

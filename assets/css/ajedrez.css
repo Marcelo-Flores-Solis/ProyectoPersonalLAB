@@ -1,0 +1,276 @@
+/* --- 1. FUENTES Y PALETA (ESTILO CLÁSICO) --- */
+/* Cinzel para títulos (Epico/Romano), Lato para lectura cómoda */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --chess-black: #262421;    /* Piezas negras / Borde tablero */
+    --chess-brown: #6b4c35;    /* Casilla oscura (Madera) */
+    --chess-cream: #f0d9b5;    /* Casilla clara (Marfil) */
+    --chess-gold: #c5a059;     /* Acentos de campeón */
+    --bg-color: #e6e2d3;       /* Fondo general (Papel viejo) */
+    --text-main: #333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, .logo {
+    font-family: 'Cinzel', serif; /* Toque serio */
+}
+
+/* --- 2. HEADER PERSONALIZADO (SOBRIO) --- */
+.site-header {
+    background-color: var(--chess-black) !important;
+    border-bottom: 4px solid var(--chess-brown);
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.logo {
+    color: var(--chess-cream) !important;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: #aaa !important;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--chess-gold) !important;
+}
+
+/* --- 3. HERO SECTION (CITA DE CAPABLANCA) --- */
+.hero-chess {
+    /* Imagen de fondo oscura y seria */
+    background: linear-gradient(rgba(20, 20, 20, 0.9), rgba(40, 30, 20, 0.8)), 
+                url('/assets/imagenes/fondoAjedrez.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid var(--chess-gold);
+}
+
+.hero-chess h2 {
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.hero-chess p {
+    color: var(--chess-gold);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- 4. TÍTULOS --- */
+.section-title {
+    font-size: 2.2rem;
+    color: var(--chess-black);
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    font-style: italic;
+}
+
+/* --- 5. REGLA 1 (DESTACADA) --- */
+.rule-highlight {
+    background: #fff;
+    border: 1px solid var(--chess-brown);
+    border-top: 5px solid var(--chess-brown);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.rule-highlight h3 {
+    font-size: 1.8rem;
+    color: var(--chess-brown);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* Grid de las Gemas (Caballos, Alfiles, etc) */
+.gems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gem-item {
+    background: var(--bg-color);
+    padding: 15px;
+    border-left: 4px solid var(--chess-black);
+    font-size: 0.95rem;
+}
+
+.gem-item strong {
+    color: var(--chess-brown);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+/* --- 6. GRID DE REGLAS 2-5 --- */
+.rules-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.rule-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s;
+}
+
+.rule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--chess-gold);
+}
+
+/* Número decorativo en la esquina */
+.card-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: var(--chess-black);
+    color: var(--chess-gold);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.rule-card h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* --- 7. CONCLUSIÓN (CAJA OSCURA) --- */
+.conclusion-box {
+    background-color: var(--chess-black);
+    color: var(--chess-cream);
+    padding: 40px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid var(--chess-gold);
+}
+
+.conclusion-box h3 { color: var(--chess-gold); margin-bottom: 20px; }
+
+.conclusion-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.conclusion-list li {
+    background: rgba(255,255,255,0.1);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* --- 8. PRÁCTICA (MOVIMIENTOS) --- */
+.bg-light {
+    background-color: #fff;
+    padding: 60px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+.moves-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.move-step {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    position: relative;
+}
+
+/* Número grande de fondo */
+.step-number {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    color: #f0f0f0;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.step-desc {
+    position: relative;
+    z-index: 2;
+    padding-top: 20px;
+}
+
+.step-desc h4 {
+    font-size: 1.5rem;
+    color: var(--chess-brown);
+    margin-bottom: 10px;
+}
+
+/* El paso destacado (d4) */
+.highlight-step .step-number { color: #f9e79f; } /* Amarillo pálido de fondo */
+.highlight-step h4 { color: #d35400; font-weight: 900; } /* Naranja quemado */
+
+/* --- 9. FOOTER --- */
+.site-footer {
+    background-color: var(--chess-black);
+    color: #888;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 4px solid var(--chess-brown);
+}

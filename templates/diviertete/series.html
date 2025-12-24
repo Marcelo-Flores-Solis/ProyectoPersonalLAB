@@ -1,45 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Series favoritas</title>
-		<link rel="stylesheet" href="../styles/styles.css">
-	</head>
-	<body>
-		<header>
-			<h1>Series que recomiendo</h1>
-			<nav>
-				<a href="../index.html">Inicio</a> |
-				<a href="musica.html">Música</a>
-			</nav>
-		</header>
-		<main class="container">
-			<section aria-labelledby="series-list">
-				<h2 id="series-list">Series</h2>
-				<ul class="series-list">
-					<li>The Boys / Gen V</li>
-					<li>Stranger Things</li>
-					<li>Black Mirror</li>
-				</ul>
-			</section>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Series | Cine en Casa</title>
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/series.css">
+</head>
 
-			<section class="watch-card" aria-labelledby="saw-question">
-				<h3 id="saw-question">¿Ya la viste?</h3>
-				<form class="saw-form" onsubmit="event.preventDefault(); alert('Gracias por responder!');">
-					<label>
-						<input type="radio" name="seen" value="sí"> Sí
-					</label>
-					<label>
-						<input type="radio" name="seen" value="no"> No
-					</label>
-					<button type="submit">Enviar</button>
-				</form>
-			</section>
-		</main>
-		<footer>
-			<p>© — Series</p>
-		</footer>
-	</body>
+<body>
+    
+    <header class="header-series">
+        <div class="header-container">
+            <a href="/series" class="logo-series"> MIS SERIES </a>
+            
+            <nav class="nav-series">
+                <a href="/" class="nav-item">Inicio</a>
+                <a href="/musica" class="nav-item">Música</a>
+                <a href="/juegos" class="nav-item">Juegos</a>
+                <a href="/contacto" class="nav-item btn-highlight">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-series">
+            <div class="hero-content">
+                <h2>Historias Épicas</h2>
+                <p>Las series que definieron mis maratones.</p>
+            </div>
+        </section>
+
+        <section class="container content-section">
+            <div class="series-grid">
+
+                <article class="series-card">
+                    <div class="poster">
+                        <img src="/assets/imagenes/moonknight.jpg" alt="Moon Knight">
+                        <a href="https://www.marvel.com/tv-shows/moon-knight/1" target="_blank" class="overlay-btn">Ver Info</a>
+                    </div>
+                    <div class="info">
+                        <h3>Moon Knight</h3>
+                        <p>Marvel / Acción</p>
+                    </div>
+                </article>
+
+                <article class="series-card">
+                    <div class="poster">
+                        <img src="/assets/imagenes/rezero.jpg" alt="Re:Zero">
+                        <a href="https://www.youtube.com/watch?v=65BiDF9YdGgSHO" target="_blank" class="overlay-btn">Trailer</a>
+                    </div>
+                    <div class="info">
+                        <h3>Re:Zero</h3>
+                        <p>Anime / Isekai</p>
+                    </div>
+                </article>
+
+                <article class="series-card">
+                    <div class="poster">
+                        <img src="/assets/imagenes/shamanking.jpg" alt="Shaman King">
+                        <a href="https://www.youtube.com/watch?v=rV8RZrZskdk" target="_blank" class="overlay-btn">Trailer</a>
+                    </div>
+                    <div class="info">
+                        <h3>Shaman King</h3>
+                        <p>Anime / Shonen</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-series">
+        <p>© 2025 — byMarcelo</p>
+    </footer>
+	<script src="/assets/js/main.js"></script>
+</body>
 </html>
-

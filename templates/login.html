@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Acceso Admin | Cefiro Productions</title>
+        
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/login.css">
+    </head>
+    
+    <body>
+        <header class="site-header">
+            <div class="container header-content">
+                <h1 class="logo">Administración 🔒</h1>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">← Volver al Inicio</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-login">
+                <div class="container text-center">
+                    <h2>Área Restringida</h2>
+                    <p>Solo personal autorizado.</p>
+                </div>
+            </section>
+
+            <section class="container content-section">
+                <div class="login-card">
+                    
+                    <div class="login-header">
+                        <h3>Iniciar Sesión</h3>
+                        <p>Ingresa tus credenciales</p>
+                    </div>
+
+                    <form action="/login" method="POST" class="login-form">
+                        
+                        <div class="form-group">
+                            <label for="username">Usuario:</label>
+                            <input type="text" id="username" name="username" placeholder="Tu usuario" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        </div>
+
+                        <button type="submit" class="btn-login">Entrar al Sistema</button>
+                    </form>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>Sistema de Gestión &copy; 2025</p>
+            </div>
+        </footer>
+        <script src="/assets/js/main.js"></script>
+    </body>
+</html>

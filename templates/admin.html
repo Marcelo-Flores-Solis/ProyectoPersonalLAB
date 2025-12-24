@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Panel de Administracion</title>
+        
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/admin.css">
+    </head>
+    
+    <body>
+        <div class="admin-layout">
+            
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h2>Admin Panel</h2>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active">Mensajes</a>
+                    <a href="#" class="nav-item">Configuracion</a>
+                    <a href="/" class="nav-item logout">Cerrar Sesion</a>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <header class="top-bar">
+                    <h3>Bandeja de Entrada</h3>
+                    <div class="user-info">Hola, Admin</div>
+                </header>
+
+                <div class="content-container">
+                    
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                           <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Mensaje</th>
+                                    <th>Fecha</th> </tr>
+                            </thead>
+                            <tbody>
+                                {FILAS_TABLA}
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+        <script src="/assets/js/main.js"></script>
+    </body>
+</html>

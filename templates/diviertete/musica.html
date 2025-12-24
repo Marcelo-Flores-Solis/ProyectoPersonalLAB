@@ -1,30 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Música</title>
-		<link rel="stylesheet" href="../styles/styles.css">
+		<title>Mi Playlist | Chill Vibes</title>
+		
+		<link rel="stylesheet" href="/assets/css/main.css">
+		<link rel="stylesheet" href="/assets/css/music.css">
 	</head>
+
 	<body>
-		<header>
-			<h1>Música favorita</h1>
-			<nav>
-				<a href="../index.html">Inicio</a> |
-				<a href="series.html">Series</a> |
-				<a href="juegos.html">Juegos</a>
-			</nav>
+		
+		<header class="header-music">
+			<div class="header-container">
+				<a href="/musica" class="logo-music">MY PLAYLIST</a>
+				
+				<nav class="nav-music">
+					<a href="/" class="nav-item">Inicio</a>
+					<a href="/juegos" class="nav-item">Juegos</a>
+					<a href="/series" class="nav-item">Series</a>
+					<a href="/contacto" class="nav-item btn-contact-music">Contacto</a>
+				</nav>
+			</div>
 		</header>
+
 		<main>
-			<p>Lista de canciones y artistas que me gustan.</p>
-			<ol>
-				<li>Artista A — Canción 1</li>
-				<li>Artista B — Canción 2</li>
-			</ol>
+			<section class="hero-music-visual">
+				<div class="hero-content">
+					<h2>Vibras & Ritmos</h2>
+					<p>La banda sonora para programar, jugar y relajarme.</p>
+					<div class="sound-wave">||||| ||| ||||| || ||||||</div>
+				</div>
+			</section>
+
+			<section class="container content-section">
+				<div class="music-grid">
+
+					<article class="music-card">
+						<div class="album-art">
+							<img src="/assets/imagenes/rude.jpg" alt="Rude">
+							<a href="https://www.youtube.com/watch?v=PIh2xe4jnpk" target="_blank" class="play-overlay">
+								<span class="play-icon">▶</span>
+							</a>
+						</div>
+						<div class="music-info">
+							<h3>Rude</h3>
+							<p class="artist">MAGIC!</p>
+							<p class="album">Don't Kill the Magic</p>
+						</div>
+					</article>
+
+					<article class="music-card">
+						<div class="album-art">
+							<img src="/assets/imagenes/fairytale.jpg" alt="Fairytale">
+							<a href="https://www.youtube.com/watch?v=3zYCYpbVzHk" target="_blank" class="play-overlay">
+								<span class="play-icon">▶</span>
+							</a>
+						</div>
+						<div class="music-info">
+							<h3>Fairytale</h3>
+							<p class="artist">Alexander Rybak</p>
+							<p class="album">Fairytales</p>
+						</div>
+					</article>
+
+					<article class="music-card">
+						<div class="album-art">
+							<img src="/assets/imagenes/direction.jpeg" alt="Direction">
+							<a href="https://www.youtube.com/watch?v=3icALOQJnWg" target="_blank" class="play-overlay">
+								<span class="play-icon">▶</span>
+							</a>
+						</div>
+						<div class="music-info">
+							<h3>Direction</h3>
+							<p class="artist">Solence</p>
+							<p class="album">Direction</p>
+						</div>
+					</article>
+
+					<article class="music-card">
+						<div class="album-art">
+							<img src="/assets/imagenes/riptide.jpeg" alt="Riptide">
+							<a href="https://www.youtube.com/watch?v=TL_oroU9eN8" target="_blank" class="play-overlay">
+								<span class="play-icon">▶</span>
+							</a>
+						</div>
+						<div class="music-info">
+							<h3>Riptide</h3>
+							<p class="artist">Vance Joy</p>
+							<p class="album">Dream Your Life Away</p>
+						</div>
+					</article>
+
+					<article class="music-card">
+						<div class="album-art">
+							<img src="/assets/imagenes/myway.jpg" alt="My Way">
+							<a href="https://www.youtube.com/watch?v=qQzdAsjWGPg" target="_blank" class="play-overlay">
+								<span class="play-icon">▶</span>
+							</a>
+						</div>
+						<div class="music-info">
+							<h3>My Way</h3>
+							<p class="artist">Frank Sinatra</p>
+							<p class="album">Greatest Hits</p>
+						</div>
+					</article>
+
+					<article class="music-card">
+						<div class="album-art">
+							<img src="/assets/imagenes/styxhelix.jpeg" alt="Styx Helix">
+							<a href="https://www.youtube.com/watch?v=tIhL2KHVdgE" target="_blank" class="play-overlay">
+								<span class="play-icon">▶</span>
+							</a>
+						</div>
+						<div class="music-info">
+							<h3>Styx Helix</h3>
+							<p class="artist">MYTH & ROID</p>
+							<p class="album">Re:Zero ED</p>
+						</div>
+					</article>
+
+				</div>
+			</section>
 		</main>
-		<footer>
-			<p>© — Música</p>
+
+		<footer class="site-footer">
+			<div class="container">
+				<p>© 2025 — byMarcelo</p>
+			</div>
 		</footer>
+		<script src="/assets/js/main.js"></script>
 	</body>
 </html>
-

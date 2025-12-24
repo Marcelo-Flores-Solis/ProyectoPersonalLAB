@@ -1,0 +1,141 @@
+/* --- ESTILOS DEL HUB (INICIO) --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Fondo neutral grisáceo */
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* --- HERO (BIENVENIDA) --- */
+.intro-bienvenida {
+    /* Degradado suave y moderno */
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    color: white;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+}
+
+.intro-bienvenida h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.intro-bienvenida p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.btn-start {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-start:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- GRID DEL HUB --- */
+.grid-hub {
+    display: grid;
+    /* Tarjetas grandes y vistosas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0 60px;
+}
+
+/* --- TARJETAS DE FUSIÓN --- */
+.hub-card {
+    position: relative;
+    background: white;
+    height: 250px; /* Altura fija */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid #eee;
+}
+
+/* Enlace que cubre toda la tarjeta */
+.full-link {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 10;
+}
+
+.card-content {
+    z-index: 2;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.hub-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hub-card p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Botón falso decorativo */
+.fake-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid #ccc;
+    color: #999;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/* --- TEMAS (COLORES ESPECÍFICOS) --- */
+/* Definimos el color de cada tarjeta */
+.theme-chess  { --theme-color: #6b4c35; } /* Café Ajedrez */
+.theme-piano  { --theme-color: #d4a373; } /* Dorado Piano */
+.theme-games  { --theme-color: #F02D3A; } /* Rojo Gamer */
+.theme-music  { --theme-color: #1db954; } /* Verde Spotify */
+.theme-series { --theme-color: #8e44ad; } /* Morado Cine */
+
+/* --- INTERACCIÓN HOVER (LA MAGIA) --- */
+.hub-card:hover {
+    transform: translateY(-10px); /* Flota */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    /* El borde inferior se pinta del color del tema */
+    border-bottom: 8px solid var(--theme-color);
+}
+
+.hub-card:hover h3 {
+    color: var(--theme-color); /* Título cambia de color */
+}
+
+.hub-card:hover .fake-btn {
+    background-color: var(--theme-color); /* Botón se llena de color */
+    border-color: var(--theme-color);
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .intro-bienvenida h2 { font-size: 2rem; }
+    .hub-card { height: 200px; }
+}

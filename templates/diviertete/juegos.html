@@ -1,79 +1,94 @@
 <!DOCTYPE html>
-	<html lang="es">
-		<head>
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width,initial-scale=1">
-			<title>Juegos</title>
-			<link rel="stylesheet" href="../styles/styles1.css">
-		</head>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Zona Gamer | Tu mundo</title>
+        
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/games.css">
+    </head>
 
-		<body>
-			<header class = "headerJuegos">
-				<div class = "menuJuegos responsive">
+    <body class="gamer-mode">
+        
+        <header class="headerJuegos">
+            
+            <div class="header-nav">
+                <a href="/juegos" class="logo">JUEGOS 🕹️</a>
+                <nav class="nav-links">
+                    <a href="/">Inicio</a>
+                    <a href="/musica">Música</a>
+                    <a href="/series">Series</a>
+                    <a href="/contacto" class="btn-contact">Contacto</a>
+                </nav>
+            </div>
 
-					<a href="" class="logo">JUEGOS</a>
-					<input type="checkbox" id="menu-bar">
-					<label for="menu-bar"><img src="../imagenes/menu.png" class= "menu-icono" alt=""></label>
-					<nav class= "navJuegos">
+            <div class="hero-content">
+                <h1>Tu mundo, tus reglas</h1>
+                <p>No solo juegues… vive la aventura.</p>
+                <a href="#catalogo" class="btn-descubre">DESCUBRE</a>
+            </div>
+            
+            <div class="overlay"></div>
+        </header>
 
-						<ul>
-							<li><a href="../index.html"> Inicio </a></li>
-							<li> <a href="musica.html"> Musica </a> </li>
-							<li> <a href="series.html"> Series</a> </li>
-						</ul>
+        <main id="catalogo">
+            
+            <section class="seccion-juegos terraria-style">
+                <div class="game-info">
+                    <details>
+                        <summary class="tituloJuegos">Terraria</summary>
+                        <p>¡Cava, lucha, explora, construye! Nada es imposible en este juego de aventuras repleto de acción.</p>
+                    </details>
+                    <a href="https://store.steampowered.com/app/105600/Terraria/" target="_blank" class="btn-Steam">
+                        <img src="/assets/imagenes/steam.png" alt="Steam"> Ver en Steam
+                    </a>
+                </div>
+            </section>
 
-					</nav>
+            <section class="seccion-juegos minecraft-style">
+                <div class="game-info">
+                    <details>
+                        <summary class="tituloJuegos">Minecraft</summary>
+                        <p>Explora mundos infinitos y construye cosas increíbles, desde casas sencillas hasta castillos.</p>
+                    </details>
+                    <a href="https://www.minecraft.net/" target="_blank" class="btn-Steam">
+                        <img src="/assets/imagenes/minecraft.svg" alt="MC"> Sitio Oficial
+                    </a>
+                </div>
+            </section>
 
-				</div>	
+            <section class="seccion-juegos pokemmo-style">
+                <div class="game-info">
+                    <details>
+                        <summary class="tituloJuegos">PokeMMO</summary>
+                        <p>Juego multijugador masivo en línea gratuito. Combina regiones y batallas con amigos.</p>
+                    </details>
+                    <a href="https://pokemmo.eu/" target="_blank" class="btn-Steam">
+                        <img src="/assets/imagenes/pokemmo.png" alt="PK"> Descargar
+                    </a>
+                </div>
+            </section>
 
-				<div class ="contenidoJuegos responsive">
-					<h1>Tu mundo, tus reglas</h1>
-					<p>No solo juegues… vive la aventura.</p>
-					<a href="#DESCUBRE" class="btn-1">DESCUBRE</a>
-				</div>
-			</header>
+            <section class="seccion-juegos undertale-style">
+                <div class="game-info">
+                    <details>
+                        <summary class="tituloJuegos">Undertale</summary>
+                        <p>El RPG donde no tienes que matar a nadie. Una historia llena de determinación.</p>
+                    </details>
+                    <a href="https://undertale.com/" target="_blank" class="btn-Steam">
+                        <img src="/assets/imagenes/undertale.png" alt="UT"> Sitio Web
+                    </a>
+                </div>
+            </section>
 
-			<div class="separador"></div>
+        </main>
 
-			<main class = "mainJuegos" id=  "DESCUBRE">
-				<section class = "terraria seccion-juegos">
-					<details class = "informacionJuegos">
-						<summary class = "tituloJuegos" > Terraria</summary>
-						<p>¡Cava, lucha, explora, construye! Nada es imposible en este juego de aventuras repleto de acción. El mundo es tu lienzo y la tierra misma es tu pintura.</p>
-					</details>
-				<a href="https://store.steampowered.com/app/105600/Terraria/" target="_blank" class="btn-Steam"><img src="../imagenes/steam.png" alt="" class="icono">Steam</a>
-				</section>
+        <footer class="footer-gamer">
+            <p>By Cefiro</p>
+        </footer>
 
-				<section class = "minecraft seccion-juegos">
-					<details class = "informacionJuegos">
-						<summary class = "tituloJuegos" > Minecraft</summary>
-						<p>Explora mundos generados por procedimientos y construye cosas increíbles, desde las casas más sencillas hasta los castillos más grandiosos. Juega a tu manera en modo creativo o aventúrate en el modo supervivencia, donde tendrás que adquirir recursos y mantenerte a salvo de los peligros.</p>
-					</details>
-				<a href="https://www.minecraft.net/es-es" target="_blank" class="btn-Steam"><img src="../imagenes/minecraft.avif" alt="" class="icono">Minecraft</a>
-				</section>
-
-				<section class ="pokemmo seccion-juegos">
-					<details class = "informacionJuegos">
-						<summary class = "tituloJuegos" > PokeMMO</summary>
-						<p>PokéMMO es un juego multijugador masivo en línea gratuito basado en los juegos de Pokémon. Combina varias regiones y características de los juegos originales de Pokémon para ofrecer una experiencia única y social.</p>
-					</details>
-				<a href="https://pokemmo.eu/" target="_blank" class="btn-Steam"><img src="../imagenes/pokemmo.png" alt="" class="icono">PokeMMO</a>
-				</section>
-
-				<section class = "undertale seccion-juegos">
-					<details class = "informacionJuegos">
-						<summary class = "tituloJuegos" > Undertale</summary>
-						<p>Undertale es un juego de rol independiente creado por Toby Fox. En este juego, los jugadores controlan a un niño que ha caído en el subsuelo, una vasta región debajo de la superficie de la Tierra, habitada por monstruos. El juego es conocido por su narrativa única, su sistema de combate innovador y su enfoque en las elecciones morales.</p>
-					</details>
-				<a href="https://undertale.com/" target="_blank" class="btn-Steam"><img src="../imagenes/undertale.png" alt="" class="icono">Undertale</a>
-				</section>
-			</main>
-
-
-
-
-			<footer>
-				<p>byMarcelo</p>
-			</footer>
-		</body>
-	</html>
+        <script src="/assets/js/juegos.js"></script>
+		<script src="/assets/js/main.js"></script>
+    </body>
+</html>
